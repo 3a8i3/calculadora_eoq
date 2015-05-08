@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculadora EOQ</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+<style type="text/css">
+	
+	
+</style>
+</head>
+<body>
+<div id="form-content">
+	<form method="post" name="formulario" class="form-horizontal" id="formulario">
+    	<fieldset>
+        	<legend>Calculadora de inventarios - Método EOQ con ordenes pendientes</legend>
+            <div class="control-group">
+                <label for="d" class="control-label">D:</label>
+                <div class="controls">
+                	<input id="d" name="d" type="number" title="Número de unidades demandadas durante un año">
+                </div>
+			</div>
+            <div class="control-group">
+                <label for="co" class="control-label">Co:</label>
+                <div class="controls">
+                	<input id="co" name="co" type="number" title="Costo de Ordenar">
+                </div>
+			</div>
+            <div class="control-group">
+                <label for="ch" class="control-label">Ch:</label>
+                <div class="controls">
+                	<input id="ch" name="ch" type="number" title="Costo de mantener una unidad en inventario por año">
+                </div>
+            </div>
+            <div class="control-group">                    
+                <label for="cs" class="control-label">Cs:</label>
+                <div class="controls">
+                	<input id="cs" name="cs" type="number" title="Costo de mantener un articulo pendiente por año">
+                </div>
+            </div>
+            <div class="control-group">    
+                <label for="q" class="control-label">Q:</label>
+                <div class="controls">
+                	<input id="q" name="q" type="number" title="Cantidad Ordenada">
+                </div>                
+            </div>
+            <div class="control-group">    
+                <label for="s" class="control-label">S:</label>
+                <div class="controls">
+                	<input id="s" name="s"  type="number" title="Cantidad max. de unidades pendientes acumuladas">
+                </div>  
+            </div>
+        </fieldset>
+        <div class=""></div>
+    </form>
+</div>
+<div id="resultado"></div>
+<div id="refenecia"></div>	
+
+<script src="js/jquery.min.js"></script>
+<script src="js/calcular.js"></script>
+</body>
+</html>
