@@ -1,4 +1,38 @@
-#form-content{
-	margin:10px;
-	padding: 20px;
+body{
+	margin-top: 25px;
+	background-color: #D2D2D2;
+}
+.borde{
+	border: solid 1px #0000FF;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 8px #3280CD;
+	box-shadow: 0px 0px 8px #3280CD;
+}
+.container{
+	padding-bottom: 2%;	
+}
+#ref{
+	height:325px;
+}
+#res{
+	height:325px;
+	padding-top: 70px;
+	padding-right: 4%;
+}
+footer{
+	margin-top: 15px;
+}
+#frm{
+	height:325px;
+	padding-top: 20px;
+	padding-right:3%;
+	padding-left:3%;
+}
+.no-number{
+	border:solid 1px #FF0000;
+}
+.t-der{
+	text-align:right;
+	font-size:20px;
+	color:#063;
 }

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculadora EOQ</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="fonts/cufon/cufon-yui.js"></script>
+<script src="fonts/cufon/game-power.cufonfonts.js"></script>
+</head>
+<body class="container borde">
+	<fieldset>
+	  	<h1 class="titulo text-center">:: Calculadora de inventarios ::</h1>
+        <h2 class="titulo text-center">:: Modelo EOQ con ordenes pendientes ::</h2>
+    </fieldset>
+    <div class="conteiner">
+    	<div class="col-sm-4 borde">
+            <p class="text-center lead sub-titulo">-Ingrese los Datos-</p>
+			<div id="frm">
+            	<form class="form-horizontal" id="frm">
+                    <div class="form-group">
+                        <label for="d" class="col-sm-3 control-label text-right">D:</label>
+                        <div class="col-sm-9">
+                            <input id="d" class="form-control" type="number" title="Número de unidades demandadas durante un año"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="co" class="col-sm-3 control-label text-right">Co:</label>
+                        <div class="col-sm-9">
+                            <input id="co" class="form-control" type="number" title="Costo de Ordenar"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ch" class="col-sm-3 control-label text-right">Ch:</label>
+                        <div class="col-sm-9">
+                            <input id="ch" class="form-control" type="number" title="Costo de mantener una unidad en inventario por año"/>
+                        </div>
+                    </div>
+                    <div class="form-group">                    
+                        <label for="cs" class="col-sm-3 control-label text-right">Cs:</label>
+                        <div class="col-sm-9">
+                            <input id="cs" class="form-control" type="number" title="Costo de mantener un articulo pendiente por año"/>
+                        </div>
+                    </div>
+                    <div class="container col-sm-12">
+                        <div class="form-group">
+                            <button class="btn btn-default col-sm-6" id="btn_calcular" type="button">Calcular</button>
+                            <button class="btn btn-default col-sm-6" id="btn_limpiar" type="button">Limpiar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>	
+		</div>
+        <div class="col-sm-4 borde">
+        	<p class="text-center lead sub-titulo">-Resultados-</p>
+            <div id="res" class="form-horizontal col-sm-12">
+            	<div class="form-group">
+                	<label class="control-label col-sm-3 text-right">Q*=</label>
+                    <div class="col-sm-9">
+                    	<input type="text" class="form-control t-der" id="q" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                	<label class="control-label col-sm-3 text-right">S*=</label>
+                    <div class="col-sm-9">
+                    	<input type="text" class="form-control t-der" id="s" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                	<label class="control-label col-sm-3 text-right">(Q*-S*)=</label>
+                    <div class="col-sm-9">
+                    	<input type="text" class="form-control t-der" id="qs" disabled/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 borde">
+        	<p class="text-center lead sub-titulo">-Referencias-</p>
+            <div id="ref" class="col-sm-12">
+            	<p class="text-justify">
+                	<b>D</b> = Numero de unidades demandadas durante un año.<br/><br/>
+                    <b>Co</b> = Costo de orenar.<br/><br/>
+                    <b>Ch</b> = Costo de mantener una unidad en inventario durante un año.<br/><br/>
+                    <b>Cs</b> = Costo de mantener un articulo pendiente por año.<br/>
+                    <hr/>
+                    <b>
+                        Q* = Tamaño de orden optimo.<br/>
+                        S* = Nivel optimo de inventario.<br/>
+                        (Q*-S*) = Nivel maximo de inventario.
+                    </b>
+               	</p>
+            </div>
+        </div>
+	</div>
+    <footer class="col-sm-12 text-center">FACITEC - 2015 -</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/calcular.js"></script>
+<script type="text/javascript">
+    	Cufon.replace('.titulo', { fontFamily: 'game powerRegular', hover: true });   
+		Cufon.replace('.sub-titulo', { fontFamily: 'game powerRegular', hover: true });
+		Cufon.replace('footer', { fontFamily: 'game powerRegular', hover: true }); 
+</script>
+</body>
+</html>
