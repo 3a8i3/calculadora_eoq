@@ -85,7 +85,7 @@ function realizar_calculos(){
 		var valor = calcular_q().toFixed(3); //tres decimales
 		txt_q.val(valor.replace(".",",")); // coma en vez de punto
 		
-		valor = calcular_s().toFixed(3) /
+		valor = calcular_s().toFixed(3);
 		txt_s.val(valor.replace(".",","));
 		
 		valor = calcular_qs().toFixed(3);
