@@ -1,6 +1,8 @@
 $(document).ready(function() {
     registrar_eventos();
 	recuperar_campos();
+	$('#acerca_de').click(mostar_acerca);
+	$('#acer-close').click(ocultar_acerca);
 });
 
 /*<variables>*/
@@ -111,4 +113,12 @@ function calcular_s(){
 function calcular_qs(){
 	qs = q - s;
 	return qs;
+}
+function mostar_acerca(){
+	$("#calc-content, #resu-content, #ref-content").hide('slow');
+	$("#acerca-content").show('slow');
+}
+function ocultar_acerca(){
+	$("#acerca-content").hide('slow');
+	$("#calc-content, #resu-content, #ref-content").show('slow');
 }

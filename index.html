@@ -10,11 +10,11 @@
 </head>
 <body class="container borde">
 	<fieldset>
-	  	<h1 class="titulo text-center">:: Calculadora de inventarios ::</h1>
-        <h2 class="titulo text-center">:: Modelo EOQ con ordenes pendientes ::</h2>
+	  	<h2 class="titulo text-center">:: Calculadora de inventarios ::</h2>
+        <h4 class="titulo text-center">:: Modelo EOQ con ordenes pendientes ::</h4>
     </fieldset>
     <div class="conteiner">
-    	<div class="col-sm-4 borde">
+    	<div id="calc-content" class="col-sm-4 borde">
             <p class="text-center lead sub-titulo">-Ingrese los Datos-</p>
 			<div id="frm">
             	<form class="form-horizontal" id="frm">
@@ -51,7 +51,7 @@
                 </form>
             </div>	
 		</div>
-        <div class="col-sm-4 borde">
+        <div id="resu-content" class="col-sm-4 borde">
         	<p class="text-center lead sub-titulo">-Resultados-</p>
             <div id="res" class="form-horizontal col-sm-12">
             	<div class="form-group">
@@ -74,31 +74,49 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 borde">
+        <div id="ref-content" class="col-sm-4 borde">
         	<p class="text-center lead sub-titulo">-Referencias-</p>
             <div id="ref" class="col-sm-12">
             	<p class="text-justify">
-                	<b>D</b> = Numero de unidades demandadas durante un año.<br/><br/>
-                    <b>Co</b> = Costo de orenar.<br/><br/>
+                	<b>D</b> = Número de unidades demandadas durante un año.<br/><br/>
+                    <b>Co</b> = Costo de ordenar.<br/><br/>
                     <b>Ch</b> = Costo de mantener una unidad en inventario durante un año.<br/><br/>
-                    <b>Cs</b> = Costo de mantener un articulo pendiente por año.<br/>
+                    <b>Cs</b> = Costo de mantener un artículo pendiente por año.<br/>
                     <hr/>
                     <b>
-                        Q* = Tamaño de orden optimo.<br/>
-                        S* = Nivel optimo de inventario.<br/>
-                        (Q*-S*) = Nivel maximo de inventario.
+                        Q* = Tamaño de orden óptimo.<br/>
+                        S* = Nivel óptimo de inventario.<br/>
+                        (Q*-S*) = Nivel máximo de inventario.
                     </b>
                	</p>
             </div>
         </div>
+        <div id="acerca-content" class="col-sm-12 borde">
+        	<div id="close-content" class="text-right">
+            	<a id="acer-close"><h4>[X]</h4></a>
+            </div>
+        	<h1 class="text-center">Universidad Nacional de Canindeyú</h1>
+            <h2 class="text-center">Facultad de Ciencias y Tecnologías</h2><br/>
+            <h3 class="text-center">Trabajo Práctico</h3>
+            <h3 class="text-center">Investigación Operacional</h3><br/>
+            <h4 class="text-right">
+            	Prof: Ing. Walter Gómez<br/><br/>
+                Alum: David Ruiz Diaz
+            </h4>
+            <h3 class="text-center">- 2015/1 -</h3>
+        </div>
 	</div>
-    <footer class="col-sm-12 text-center">FACITEC - 2015 -</footer>
+    <footer class="col-sm-12 borde text-right">
+        <a id="fa" href="http://facitec.edu.py/" target="_blank">FACITEC - 2015 -</a>
+        <a id="acerca_de">Acerca de</a>
+    </footer>
 <script src="js/jquery.min.js"></script>
 <script src="js/calcular.js"></script>
 <script type="text/javascript">
     	Cufon.replace('.titulo', { fontFamily: 'game powerRegular', hover: true });   
 		Cufon.replace('.sub-titulo', { fontFamily: 'game powerRegular', hover: true });
-		Cufon.replace('footer', { fontFamily: 'game powerRegular', hover: true }); 
+		Cufon.replace('footer', { fontFamily: 'game powerRegular', hover: true });
+		Cufon.replace('#acer-close', { fontFamily: 'game powerRegular', hover: true }); 
 </script>
 </body>
 </html>
