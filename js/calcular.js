@@ -84,14 +84,14 @@ function realizar_calculos(){
 		cs= parseFloat(txt_cs.val());
 		co= parseFloat(txt_co.val());
 		
-		var valor = calcular_q().toFixed(3); //tres decimales
-		txt_q.val(valor.replace(".",",")); // coma en vez de punto
+		var valor = formato_numero(calcular_q(),3,',','.'); //da formato al numero 000.000,000
+		txt_q.val(valor); 
 		
-		valor = calcular_s().toFixed(3);
-		txt_s.val(valor.replace(".",","));
+		valor = formato_numero(calcular_s(),3,',','.');
+		txt_s.val(valor);
 		
-		valor = calcular_qs().toFixed(3);
-		txt_qs.val(valor.replace(".",","));
+		valor = formato_numero(calcular_qs(),3,',','.');
+		txt_qs.val(valor);
 	} else {
 		alert("Por favor llene los campos correctamente para continuar");
 	}
@@ -121,4 +121,28 @@ function mostar_acerca(){
 function ocultar_acerca(){
 	$("#acerca-content").hide('slow');
 	$("#calc-content, #resu-content, #ref-content").show('slow');
+}
+function formato_numero(numero, decimales, separador_decimal, separador_miles){ // v2007-08-06
+    numero=parseFloat(numero);
+    if(isNaN(numero)){
+        return "";
+    }
+
+    if(decimales!==undefined){
+        // Redondeamos
+        numero=numero.toFixed(decimales);
+    }
+
+    // Convertimos el punto en separador_decimal
+    numero=numero.toString().replace(".", separador_decimal!==undefined ? separador_decimal : ",");
+
+    if(separador_miles){
+        // Añadimos los separadores de miles
+        var miles=new RegExp("(-?[0-9]+)([0-9]{3})");
+        while(miles.test(numero)) {
+            numero=numero.replace(miles, "$1" + separador_miles + "$2");
+        }
+    }
+
+    return numero;
 }
