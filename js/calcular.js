@@ -65,13 +65,13 @@ function validar_campos(){
 
 /**Vacia todos los campos*/
 function limpiar_campos(){
-	txt_d.val("");
-	txt_co.val("");
-	txt_cs.val("");
-	txt_ch.val("");
-	txt_q.val("");
-	txt_s.val("");
-	txt_qs.val("");
+	txt_d.val("").removeClass("no-number");
+	txt_co.val("").removeClass("no-number");
+	txt_cs.val("").removeClass("no-number");
+	txt_ch.val("").removeClass("no-number");
+	txt_q.val("").removeClass("no-number");
+	txt_s.val("").removeClass("no-number");
+	txt_qs.val("").removeClass("no-number");
 }
 
 /**Realiza llamadas a las funciones encargadas de
